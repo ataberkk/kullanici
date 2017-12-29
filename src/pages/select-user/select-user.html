@@ -1,0 +1,18 @@
+<ion-header>
+        <ion-navbar>
+          <ion-title>
+            Kişi Seç
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding>
+            <ion-list>
+                    <ion-item *ngFor="let user of users">
+                     
+                      <h2>{{user.name.first}}</h2>
+                      <p></p>
+                    </ion-item>
+                  </ion-list>
+                  <button ion-button color="primary">Seç</button>
+      </ion-content>

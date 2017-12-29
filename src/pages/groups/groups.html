@@ -1,0 +1,17 @@
+<ion-header>
+        <ion-navbar>
+          <ion-title>
+            Gruplar
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding>
+            <ion-list>
+                    <ion-item ion-item *ngFor="let group of groups">
+                      {{ group }}
+                      <button ion-button clear item-end (click)="goToGroupDetailPage()">Görüntüle</button>
+                    </ion-item>  
+                    
+                  </ion-list>
+      </ion-content>
