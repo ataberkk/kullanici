@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Kişi Bilgileri</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding >
+      <ion-list>
+          <form [formGroup]="user">
+          <ion-item>
+            <ion-label floating>
+              Adı Soyadı
+            </ion-label>
+            <ion-input type="text" name="user_name" formControlName="name" value="Ataberk Uren"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              Eposta
+            </ion-label>
+            <ion-input type="text" name="user_email" formControlName="email" value="ataberkuren_59@hotmail.com"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              Telefon
+            </ion-label>
+            <ion-input type="tel" name="user_telephone" formControlName="telephone" value="05555555555"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Birim</ion-label>
+            <ion-select formControlName="unity" name="unity">
+            <ion-option>Satış</ion-option>
+            <ion-option>Teknoloji</ion-option>
+            <ion-option>Öğrenci İşleri</ion-option>
+            </ion-select>
+          </ion-item>
+          </form>
+        </ion-list>
+        <button ion-button color="primary" (click)="updateUser()">Güncelle</button>
+        <button ion-button color="danger" (click)="deleteUser()">Sil</button>
+  </ion-content>
